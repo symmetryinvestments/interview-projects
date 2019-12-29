@@ -1,0 +1,7 @@
+ut
+app
+CMakeCache.txt
+CMakeFiles
+*.cmake
+Makefile
+*.ninja
