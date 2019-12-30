@@ -1,7 +1,7 @@
 median (D)
 ============
 
-This project contains an implementation of finding the median of a set of integers in C++,
+This project contains an implementation of finding the median of a set of integers in D,
 with the very simple API and implementation in `median.d`:
 
 ```d
