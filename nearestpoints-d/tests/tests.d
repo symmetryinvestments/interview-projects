@@ -1,4 +1,5 @@
 import impl;
+import util;
 import unit_threaded;
 import std.math : approxEqual;
 import std.format: format;
@@ -53,30 +54,6 @@ unittest {
 }
 
 
-private PointRng pointRng(long cnt, uint seed) {
-	PointRng ret;
-	ret.rnd = Random(seed);
-	ret.cnt = cnt;
-	ret.front = rndPoint(ret.rnd);
-	return ret;
-}
-
-
-private struct PointRng {
-	long cnt;
-	Point front;
-	Random rnd;
-
-	@property bool empty() const {
-		return this.cnt <= 0;
-	}
-
-	void popFront() {
-		this.front = rndPoint(this.rnd);
-		this.cnt--;
-	}
-}
-
 
 @("pointRng")
 unittest {
@@ -84,10 +61,4 @@ unittest {
 	const p1 = pointRng(10, 1337);
 	const p2 = pointRng(10, 1337);
 	p1.should == p2;
-}
-
-
-private Point rndPoint(ref Random rnd) {
-	import std.random : uniform;
-	return Point(uniform(-20.0, 20.0, rnd), uniform(-20.0, 20.0, rnd));
 }
