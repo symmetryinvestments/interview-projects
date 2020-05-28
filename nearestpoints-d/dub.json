@@ -1,9 +1,0 @@
-{
-	"authors": [
-		"Robert Schadek"
-	],
-	"copyright": "Copyright © 2020, Robert Schadek",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "nearestpoints-d"
-}
