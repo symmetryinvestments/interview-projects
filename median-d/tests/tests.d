@@ -64,3 +64,19 @@ unittest {
         }
     );
 }
+
+
+@("mutation")
+unittest {
+    auto x = [2, 3, 1];
+    median(x);
+    x[0].should == 2;
+}
+
+
+@("mutation")
+unittest {
+    auto x = [2, 3, 1];
+    median(x);
+    x[0].should == 2;
+}
